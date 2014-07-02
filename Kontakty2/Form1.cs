@@ -44,5 +44,11 @@ namespace Kontakty2
             e.Cancel = true;
             MessageBox.Show("You made a BIG mistake, bro...");
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            KsiazkiWgKategorii dlg = new KsiazkiWgKategorii();
+            dlg.Show(this);
+        }
     }
 }

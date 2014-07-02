@@ -23,6 +23,7 @@ namespace Kontakty2
             this.kategorieTableAdapter.Fill(this.biblioteka.Kategorie);
             // TODO: This line of code loads data into the 'biblioteka.Ksiazki' table. You can move, or remove it, as needed.
             this.ksiazkiTableAdapter.Fill(this.biblioteka.Ksiazki);
+            
 
         }
     }
