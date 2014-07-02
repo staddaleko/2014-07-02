@@ -74,7 +74,7 @@
             this.imieDataGridViewTextBoxColumn});
             this.dataGridView1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dataGridView1.DataSource = this.autorzyBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(74, 12);
+            this.dataGridView1.Location = new System.Drawing.Point(80, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(451, 239);
             this.dataGridView1.TabIndex = 0;
@@ -248,9 +248,9 @@
             this.button1.Dock = System.Windows.Forms.DockStyle.Left;
             this.button1.Location = new System.Drawing.Point(0, 0);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(53, 272);
+            this.button1.Size = new System.Drawing.Size(68, 272);
             this.button1.TabIndex = 3;
-            this.button1.Text = "button1";
+            this.button1.Text = "Następne okienko";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 

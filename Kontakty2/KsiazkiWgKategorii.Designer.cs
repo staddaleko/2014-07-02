@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.biblioteka = new Kontakty2.biblioteka();
@@ -38,7 +42,7 @@
             this.ksiazkiTableAdapter = new Kontakty2.bibliotekaTableAdapters.KsiazkiTableAdapter();
             this.iDKsiazkiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tytulDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iDKategoriiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IDKategorii = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.biblioteka)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kategorieBindingSource)).BeginInit();
@@ -50,24 +54,40 @@
             this.comboBox1.DataSource = this.kategorieBindingSource;
             this.comboBox1.DisplayMember = "Kategoria";
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(42, 25);
+            this.comboBox1.Location = new System.Drawing.Point(45, 27);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(512, 21);
+            this.comboBox1.Size = new System.Drawing.Size(450, 21);
             this.comboBox1.TabIndex = 0;
             this.comboBox1.ValueMember = "IDKategorii";
             // 
             // dataGridView1
             // 
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
+            this.dataGridView1.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.iDKsiazkiDataGridViewTextBoxColumn,
             this.tytulDataGridViewTextBoxColumn,
-            this.iDKategoriiDataGridViewTextBoxColumn});
+            this.IDKategorii});
             this.dataGridView1.DataSource = this.fKKsiazkiKategorieBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(42, 63);
+            this.dataGridView1.GridColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dataGridView1.Location = new System.Drawing.Point(45, 65);
+            this.dataGridView1.MinimumSize = new System.Drawing.Size(300, 300);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(512, 233);
+            this.dataGridView1.Size = new System.Drawing.Size(450, 300);
             this.dataGridView1.TabIndex = 1;
             // 
             // biblioteka
@@ -95,28 +115,45 @@
             // 
             // iDKsiazkiDataGridViewTextBoxColumn
             // 
+            this.iDKsiazkiDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.iDKsiazkiDataGridViewTextBoxColumn.DataPropertyName = "IDKsiazki";
-            this.iDKsiazkiDataGridViewTextBoxColumn.HeaderText = "IDKsiazki";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.NullValue = null;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.iDKsiazkiDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
+            this.iDKsiazkiDataGridViewTextBoxColumn.DividerWidth = 10;
+            this.iDKsiazkiDataGridViewTextBoxColumn.FillWeight = 50F;
+            this.iDKsiazkiDataGridViewTextBoxColumn.HeaderText = "IDKsiążki";
             this.iDKsiazkiDataGridViewTextBoxColumn.Name = "iDKsiazkiDataGridViewTextBoxColumn";
+            this.iDKsiazkiDataGridViewTextBoxColumn.Width = 86;
             // 
             // tytulDataGridViewTextBoxColumn
             // 
+            this.tytulDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.tytulDataGridViewTextBoxColumn.DataPropertyName = "Tytul";
-            this.tytulDataGridViewTextBoxColumn.HeaderText = "Tytul";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tytulDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
+            this.tytulDataGridViewTextBoxColumn.DividerWidth = 10;
+            this.tytulDataGridViewTextBoxColumn.HeaderText = "Tytuł";
             this.tytulDataGridViewTextBoxColumn.Name = "tytulDataGridViewTextBoxColumn";
             // 
-            // iDKategoriiDataGridViewTextBoxColumn
+            // IDKategorii
             // 
-            this.iDKategoriiDataGridViewTextBoxColumn.DataPropertyName = "IDKategorii";
-            this.iDKategoriiDataGridViewTextBoxColumn.HeaderText = "IDKategorii";
-            this.iDKategoriiDataGridViewTextBoxColumn.Name = "iDKategoriiDataGridViewTextBoxColumn";
+            this.IDKategorii.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.IDKategorii.DataPropertyName = "IDKategorii";
+            this.IDKategorii.FillWeight = 50F;
+            this.IDKategorii.HeaderText = "IDKategorii";
+            this.IDKategorii.Name = "IDKategorii";
+            this.IDKategorii.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // KsiazkiWgKategorii
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.ClientSize = new System.Drawing.Size(596, 393);
+            this.ClientSize = new System.Drawing.Size(541, 393);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.comboBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
@@ -142,6 +179,6 @@
         private bibliotekaTableAdapters.KsiazkiTableAdapter ksiazkiTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDKsiazkiDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tytulDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iDKategoriiDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewButtonColumn IDKategorii;
     }
 }
