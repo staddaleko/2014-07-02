@@ -26,7 +26,7 @@ namespace Kontakty2
 
         private void buttonZapisz_Click(object sender, EventArgs e)
         {
-
+            autorzyTableAdapter.Update(biblioteka.Autorzy);
         }
     }
 }
