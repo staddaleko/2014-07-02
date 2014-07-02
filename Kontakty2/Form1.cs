@@ -16,5 +16,17 @@ namespace Kontakty2
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'biblioteka.Autorzy' table. You can move, or remove it, as needed.
+            this.autorzyTableAdapter.Fill(this.biblioteka.Autorzy);
+
+        }
+
+        private void buttonZapisz_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
