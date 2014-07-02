@@ -44,6 +44,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="biblioteka.cs">
+      <DependentUpon>biblioteka.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="biblioteka.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

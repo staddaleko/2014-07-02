@@ -261,6 +261,14 @@ namespace Kontakty2 {
             base.Tables.Add(this.tableKsiazki);
             this.tableKategorie = new KategorieDataTable();
             base.Tables.Add(this.tableKategorie);
+            global::System.Data.ForeignKeyConstraint fkc;
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_Ksiazki_Kategorie", new global::System.Data.DataColumn[] {
+                        this.tableKategorie.IDKategoriiColumn}, new global::System.Data.DataColumn[] {
+                        this.tableKsiazki.IDKategoriiColumn});
+            this.tableKsiazki.Constraints.Add(fkc);
+            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
+            fkc.DeleteRule = global::System.Data.Rule.None;
+            fkc.UpdateRule = global::System.Data.Rule.None;
             this.relationFK_Ksiazki_Kategorie = new global::System.Data.DataRelation("FK_Ksiazki_Kategorie", new global::System.Data.DataColumn[] {
                         this.tableKategorie.IDKategoriiColumn}, new global::System.Data.DataColumn[] {
                         this.tableKsiazki.IDKategoriiColumn}, false);
