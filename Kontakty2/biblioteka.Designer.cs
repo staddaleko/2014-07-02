@@ -379,10 +379,10 @@ namespace Kontakty2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public AutorzyRow AddAutorzyRow(int IDAutora, string Nazwisko, string Imie) {
+            public AutorzyRow AddAutorzyRow(string Nazwisko, string Imie) {
                 AutorzyRow rowAutorzyRow = ((AutorzyRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        IDAutora,
+                        null,
                         Nazwisko,
                         Imie};
                 rowAutorzyRow.ItemArray = columnValuesArray;
@@ -430,6 +430,9 @@ namespace Kontakty2 {
                 base.Columns.Add(this.columnImie);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnIDAutora}, true));
+                this.columnIDAutora.AutoIncrement = true;
+                this.columnIDAutora.AutoIncrementSeed = -1;
+                this.columnIDAutora.AutoIncrementStep = -1;
                 this.columnIDAutora.AllowDBNull = false;
                 this.columnIDAutora.Unique = true;
                 this.columnNazwisko.AllowDBNull = false;

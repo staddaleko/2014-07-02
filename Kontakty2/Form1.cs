@@ -38,5 +38,11 @@ namespace Kontakty2
                 
             }
         }
+
+        private void dataGridView1_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            e.Cancel = true;
+            MessageBox.Show("You made a BIG mistake, bro...");
+        }
     }
 }

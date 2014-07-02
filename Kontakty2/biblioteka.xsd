@@ -74,7 +74,7 @@ SELECT IDAutora, Nazwisko, Imie FROM Autorzy WHERE (IDAutora = @IDAutora)</Comma
         <xs:element name="Autorzy" msprop:Generator_TableClassName="AutorzyDataTable" msprop:Generator_TableVarName="tableAutorzy" msprop:Generator_TablePropName="Autorzy" msprop:Generator_RowDeletingName="AutorzyRowDeleting" msprop:Generator_RowChangingName="AutorzyRowChanging" msprop:Generator_RowEvHandlerName="AutorzyRowChangeEventHandler" msprop:Generator_RowDeletedName="AutorzyRowDeleted" msprop:Generator_UserTableName="Autorzy" msprop:Generator_RowChangedName="AutorzyRowChanged" msprop:Generator_RowEvArgName="AutorzyRowChangeEvent" msprop:Generator_RowClassName="AutorzyRow">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="IDAutora" msprop:Generator_ColumnVarNameInTable="columnIDAutora" msprop:Generator_ColumnPropNameInRow="IDAutora" msprop:Generator_ColumnPropNameInTable="IDAutoraColumn" msprop:Generator_UserColumnName="IDAutora" type="xs:int" />
+              <xs:element name="IDAutora" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnIDAutora" msprop:Generator_ColumnPropNameInRow="IDAutora" msprop:Generator_ColumnPropNameInTable="IDAutoraColumn" msprop:Generator_UserColumnName="IDAutora" type="xs:int" />
               <xs:element name="Nazwisko" msprop:Generator_ColumnVarNameInTable="columnNazwisko" msprop:Generator_ColumnPropNameInRow="Nazwisko" msprop:Generator_ColumnPropNameInTable="NazwiskoColumn" msprop:Generator_UserColumnName="Nazwisko">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
