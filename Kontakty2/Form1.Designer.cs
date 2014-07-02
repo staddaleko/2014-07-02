@@ -44,16 +44,23 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLight;
+            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
+            this.dataGridView1.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.iDAutoraDataGridViewTextBoxColumn,
             this.nazwiskoDataGridViewTextBoxColumn,
             this.imieDataGridViewTextBoxColumn});
+            this.dataGridView1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dataGridView1.DataSource = this.autorzyBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(49, 22);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(391, 239);
+            this.dataGridView1.Size = new System.Drawing.Size(451, 239);
             this.dataGridView1.TabIndex = 0;
             // 
             // biblioteka
@@ -96,9 +103,9 @@
             // buttonZapisz
             // 
             this.buttonZapisz.Dock = System.Windows.Forms.DockStyle.Right;
-            this.buttonZapisz.Location = new System.Drawing.Point(747, 0);
+            this.buttonZapisz.Location = new System.Drawing.Point(545, 0);
             this.buttonZapisz.Name = "buttonZapisz";
-            this.buttonZapisz.Size = new System.Drawing.Size(48, 394);
+            this.buttonZapisz.Size = new System.Drawing.Size(48, 288);
             this.buttonZapisz.TabIndex = 1;
             this.buttonZapisz.Text = "&Zapisz";
             this.buttonZapisz.UseVisualStyleBackColor = true;
@@ -109,7 +116,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Highlight;
-            this.ClientSize = new System.Drawing.Size(795, 394);
+            this.ClientSize = new System.Drawing.Size(593, 288);
             this.Controls.Add(this.buttonZapisz);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Form1";

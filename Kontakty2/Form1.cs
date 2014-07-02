@@ -26,7 +26,17 @@ namespace Kontakty2
 
         private void buttonZapisz_Click(object sender, EventArgs e)
         {
-            autorzyTableAdapter.Update(biblioteka.Autorzy);
+            //autorzyTableAdapter.Update(biblioteka.Autorzy);//metoda 'update' jest niejako iteratorem. Sprawdza po kolei wpisy. Jezeli wiersz nie jest modyfikowany to przechodzi do nastepnego. Działa po kolei, dokładnie tak jakby było robione ręcznie. W razie zmian, odpowiednio je podaje (delete, modify, etc.). Na zakończenie robi coś takiego jak 'accept change' i zatwierdza wszystkie dane jako 'oryginalne'.
+
+            try
+            {
+                autorzyTableAdapter.Update(biblioteka.Autorzy);
+            }
+            catch (Exception ex)
+            {
+                biblioteka.Autorzy.RejectChanges();
+                
+            }
         }
     }
 }
