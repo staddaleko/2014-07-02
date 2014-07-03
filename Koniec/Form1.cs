@@ -30,6 +30,7 @@ namespace Koniec
             {
                 comboBox1.Items.Add(r);
             }
+            comboBox1.DisplayMember = "Kategoria";
         }
 
 
@@ -49,7 +50,9 @@ namespace Koniec
             else
             {
                 KsiazkiDataSet.KategorieRow row = comboBox1.SelectedItem as KsiazkiDataSet.KategorieRow;//w tym wierszu mamy 'ID' żądanej kategorii
+                widok.RowFilter = "IDkategorii =" + row.IDKategorii;
             }
+            dataGridView1.DataSource = widok;
         }
 
         
