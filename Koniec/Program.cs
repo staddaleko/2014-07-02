@@ -6,6 +6,7 @@ using System.Windows.Forms;
 
 namespace Koniec
 {
+    //skończone :)
     static class Program
     {
         /// <summary>
