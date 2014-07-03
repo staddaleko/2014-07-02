@@ -19,13 +19,27 @@ namespace Koniec
             kategorieTableAdapter1.Fill(ksiazkiDataSet1.Kategorie);
             ksiazkiTableAdapter1.Fill(ksiazkiDataSet1.Ksiazki);
 
-            comboBox1.DataSource = ksiazkiDataSet1.Kategorie;
-            comboBox1
+            //var kat = from k in ksiazkiDataSet1.Kategorie select k;
+
+            //comboBox1.DataSource = ksiazkiDataSet1.Kategorie;
+            //comboBox1.DisplayMember = "Kategoria";
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void combobox1_Format(object sender, ListControlConvertEventArgs e)
+        {
+            DataRowView rv = (DataRowView)e.ListItem;
+            KsiazkiDataSet.KategorieRow r = (KsiazkiDataSet.KategorieRow)rv.Row;
+            e.Value = r.Kategoria;
         }
     }
 }
